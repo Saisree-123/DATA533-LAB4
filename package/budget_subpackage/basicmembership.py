@@ -1,8 +1,11 @@
 import pandas as pd
 import plotly.express as px
+
 #import freemembership
 #from package.budget_subpackage.freemembership import FreeMembership
-
+# folder=r'./'
+# import os
+# print(os.listdir(folder))
 class BasicMembership:
     __percentage_list=[10,20,25]   
     def __init__(self) :
@@ -10,7 +13,7 @@ class BasicMembership:
 
     def user_expenditure_data(self):     
         try:           
-            user_data=pd.read_excel('/home/saisree/Desktop/Labs/Block3/533-softwaredev/Lab2/Budget-Planning/package/budget_subpackage/user_data.xlsx')
+            user_data=pd.read_excel(r'./package/budget_subpackage/user_data.xlsx')
             data=user_data.T
             data.columns=data.iloc[0].values        
             data=data.iloc[1: , :]    
@@ -63,7 +66,7 @@ class BasicMembership:
             reward="25% off of your membership for the next year"
         return reward
         
-
-
+basic=BasicMembership()
+basic.user_expenditure_data()
 
             

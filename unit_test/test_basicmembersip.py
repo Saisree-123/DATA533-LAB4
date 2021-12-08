@@ -30,7 +30,7 @@ class TestBasicMembersip(unittest.TestCase):
         self.assertEqual(result_labels,True)
         self.assertEqual(result_values,True) 
 
-        user_data=pd.read_excel('/home/saisree/Desktop/Labs/Block3/533-softwaredev/Lab3/DATA533-Lab3/package/budget_subpackage/user_data_test_basic.xlsx')
+        user_data=pd.read_excel(r'./package/budget_subpackage/user_data_test_basic.xlsx')
         data=user_data.T
         data.columns=data.iloc[0].values        
         data=data.iloc[1: , :]
@@ -45,7 +45,7 @@ class TestBasicMembersip(unittest.TestCase):
 
     def test_expenditure_chart(self):  
         basic1=BasicMembership()    
-        user_data=pd.read_excel('/home/saisree/Desktop/Labs/Block3/533-softwaredev/Lab3/DATA533-Lab3/package/budget_subpackage/user_data_test_basic.xlsx')
+        user_data=pd.read_excel(r'./package/budget_subpackage/user_data_test_basic.xlsx')
         data=user_data.T
         data.columns=data.iloc[0].values        
         data=data.iloc[1: , :]
