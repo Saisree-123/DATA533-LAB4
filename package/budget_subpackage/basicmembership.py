@@ -8,20 +8,26 @@ class BasicMembership:
     def __init__(self) :
         pass
 
-    def user_expenditure_data(self):                
-        user_data=pd.read_excel('/home/saisree/Desktop/Labs/Block3/533-softwaredev/Lab2/Budget-Planning/package/budget_subpackage/user_data.xlsx')
-        data=user_data.T
-        data.columns=data.iloc[0].values        
-        data=data.iloc[1: , :]    
-        return data
+    def user_expenditure_data(self):     
+        try:           
+            user_data=pd.read_excel('/home/saisree/Desktop/Labs/Block3/533-softwaredev/Lab2/Budget-Planning/package/budget_subpackage/user_data.xlsx')
+            data=user_data.T
+            data.columns=data.iloc[0].values        
+            data=data.iloc[1: , :]    
+            return data
+        except FileNotFoundError:
+            print("File is not found")
 
     def expenditure_chart(self,monthly_allowance):
-        self.__monthly_allowance=monthly_allowance
-        data=self.user_expenditure_data()        
-        labels=data.columns
-        values=data.iloc[0].values/monthly_allowance      
-        figure = px.pie(data,values=values,names=labels,hole=0.3,color_discrete_sequence=px.colors.sequential.RdBu)
-        figure.show()
+        try:
+            self.__monthly_allowance=int(monthly_allowance)
+            data=self.user_expenditure_data()        
+            labels=data.columns
+            values=data.iloc[0].values/monthly_allowance      
+            figure = px.pie(data,values=values,names=labels,hole=0.3,color_discrete_sequence=px.colors.sequential.RdBu)
+            figure.show()
+        except ValueError:
+            print("Invalid value")
         return [labels,values]
 
     def analysis_and_suggestion(self,monthly_allowance):               
