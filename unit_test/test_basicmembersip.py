@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from pandas.testing import assert_frame_equal
 from package.budget_subpackage.basicmembership import BasicMembership
-<<<<<<< HEAD
+
 
 user_data=pd.read_excel('/home/saisree/Desktop/Labs/Block3/533-softwaredev/Lab2/Budget-Planning/package/budget_subpackage/user_data.xlsx')
 data=user_data.T
