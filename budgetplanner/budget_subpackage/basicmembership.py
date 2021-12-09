@@ -13,7 +13,7 @@ class BasicMembership:
 
     def user_expenditure_data(self):     
         try:           
-            user_data=pd.read_excel(r'./package/budget_subpackage/user_data.xlsx')
+            user_data=pd.read_excel(r'./budgetplanner/budget_subpackage/user_data.xlsx')
             data=user_data.T
             data.columns=data.iloc[0].values        
             data=data.iloc[1: , :]    
