@@ -3,7 +3,9 @@ import plotly.express as px
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
-#import freemembership
+
+class InvalidOptionException(Exception):
+    pass
 
 class PremiumMembership(BasicMembership):
     __ideal_labels=["Groceries","Travel","Shopping","Restaurant","Others"]
@@ -71,15 +73,20 @@ class PremiumMembership(BasicMembership):
             print("Invalid value")
         except IndexError:
             print("Invalid index")
+        except InvalidOptionException:
+            print("Invalid option entered")
     
     def rewards_calculator(self, option, savings):    
-        reward=""
-        if(option==1):
-            reward="Gift coupon to Starbucks and McDonalds worth {} per month".format(0.015*savings)
-        elif(option==2):
-            reward="{} off of your next purchase on hudson bay with unlimited validity ".format(0.15*savings)
-        elif(option==3):
-            reward="50% off of your membership for the next year"
-        return reward   
+        try:
+            reward=""
+            if(option==1):
+                reward="Gift coupon to Starbucks and McDonalds worth {} per month".format(0.015*savings)
+            elif(option==2):
+                reward="{} off of your next purchase on hudson bay with unlimited validity ".format(0.15*savings)
+            elif(option==3):
+                reward="50% off of your membership for the next year"
+            return reward
+        except InvalidOptionException:
+            print("Invalid option entered")
         
 

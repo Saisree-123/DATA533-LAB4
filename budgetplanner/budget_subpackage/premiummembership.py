@@ -35,7 +35,7 @@ class PremiumMembership(BasicMembership):
                 go.Bar(name='Ideal', x=whole_labels, y=self.__whole_data.iloc[2].values)
             ])        
             fig.update_layout(barmode='group')
-            #fig.show()   
+            fig.show()   
         except ValueError:
             print("Invalid value")
         

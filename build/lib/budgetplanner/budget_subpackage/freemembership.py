@@ -1,5 +1,7 @@
 import plotly.graph_objects as go
 
+class InvalidAmountException(Exception):
+    pass
 class FreeMemberShip:
     def __init__(self,user_budget) :
         self.__user_budget=user_budget
@@ -41,8 +43,15 @@ class FreeMemberShip:
         
 
     def add_amount(self,amount):
-        self.__balance+=amount        
-        self.show_budget_chart()  
+        try:
+            if(amount<0):
+                raise InvalidAmountException("Invalid amount entered")
+            self.__balance+=int(amount)       
+            self.show_budget_chart()  
+        except InvalidAmountException as e:
+            print(e)
+        except ValueError:
+            print("Invalid value entered")
             
         
 

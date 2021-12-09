@@ -2,6 +2,7 @@ import plotly.graph_objects as go
 
 class InvalidAmountException(Exception):
     pass
+
 class FreeMemberShip:
     def __init__(self,user_budget) :
         self.__user_budget=user_budget
@@ -38,7 +39,7 @@ class FreeMemberShip:
                 }))
 
         fig.update_layout(paper_bgcolor = "lavender", font = {'color': "darkblue", 'family': "Arial"})
-        #fig.show()
+        fig.show()
         
         
 
