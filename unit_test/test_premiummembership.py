@@ -21,6 +21,7 @@ class TestPremiumMembersip(unittest.TestCase):
         pass
 
     def test_expenditure_data(self):
+        print('test_expenditure_data')
         self.premium1=PremiumMembership() 
         self.premium1.expenditure_chart(10000)
         whole_data=self.premium1.get_whole_data()
@@ -38,6 +39,7 @@ class TestPremiumMembersip(unittest.TestCase):
 
 
     def test_rewards_calculator(self):
+        print('test_rewards_calculator')
         reward=""    
         self.premium1=PremiumMembership()            
         self.assertEqual(self.premium1.rewards_calculator(1,1000),"Gift coupon to Starbucks and McDonalds worth {} per month".format(0.015*1000))
@@ -48,6 +50,7 @@ class TestPremiumMembersip(unittest.TestCase):
 
 
     def test_analysis_and_suggestion(self):
+        print('test_analysis_and_suggestion')
         premium1=PremiumMembership()
         test_input = io.BytesIO(b"1\n")
         sys.stdin = test_input
