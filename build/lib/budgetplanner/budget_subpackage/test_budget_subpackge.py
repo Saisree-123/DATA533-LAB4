@@ -4,6 +4,8 @@ from .premiummembership import PremiumMembership
 from ..user_subpackage.personal_info import personal_info as ps
 from ..user_subpackage.service import Service
 
+#import ..user_subpackage.personal_info.personal_info as ps
+
 def testing_budget():    
     print("Hello, we are thrilled to have you with us. We hope to make your life easier by managing your piggy bank for you :) To begin with, we would love to know more about you. Please fill in the following details")
     user_name=input("What is your name?  ")
@@ -25,13 +27,13 @@ def testing_budget():
     user_select_service=int(input("Select the appropriate service   "))
     service1.choice(user_select_service)    
 
-    if(service1.getChoice()==1 or service1.getChoice()==2):
+    if(service1.getChoice()==1):
         user_budget=int(input("Enter your goal budget   "))
         free_mem1=FreeMemberShip(user_budget)
         amount=int(input("Enter amount to add   "))
         free_mem1.add_amount(amount)        
 
-    elif(service1.getChoice()==3):
+    elif(service1.getChoice()==2):
         print("Please enter variable expenditure in user_data excel file. I would call insurances as fixed expenditure that cannot be avoided at all costs  ")
         done=input("Ping me an yes when you are done    ")
         basic_mem1=BasicMembership()
@@ -40,7 +42,7 @@ def testing_budget():
         amount=int(input("Enter amount to add   "))
         free_mem2.add_amount(amount)
 
-    elif(service1.getChoice()==4):
+    elif(service1.getChoice()==3):
         print("Please enter variable expenditure in user_data excel file. I would call insurances as fixed expenditure that cannot be avoided at all costs  ")
         done=input("Ping me an yes when you are done    ")
         premium_mem1=PremiumMembership()
