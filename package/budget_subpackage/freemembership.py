@@ -16,6 +16,7 @@ class FreeMemberShip:
         self.__balance=balance
     
     def show_budget_chart(self):
+        print('starting creation of chart')
         fig = go.Figure(go.Indicator(
             mode = "gauge+number+delta",
             value = self.__balance,
@@ -36,11 +37,15 @@ class FreeMemberShip:
 
         fig.update_layout(paper_bgcolor = "lavender", font = {'color': "darkblue", 'family': "Arial"})
         fig.show()
+        print('done with creation inside show_budget')
         
 
     def add_amount(self,amount):
+        print('adding amount')
         self.__balance+=amount
-        self.show_budget_chart()        
+        print('amount added')
+        self.show_budget_chart()  
+        print('done bitch!')      
         
 
     def withdraw_amount(self,amount):
