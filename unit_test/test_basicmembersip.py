@@ -29,8 +29,10 @@ class TestBasicMembersip(unittest.TestCase):
         
         self.assertEqual(result_labels,True)
         self.assertEqual(result_values,True) 
-
-        user_data=pd.read_excel(r'./package/budget_subpackage/user_data_test_basic.xlsx')
+        try:
+            user_data=pd.read_excel(r'./package/budget_subpackage/user_data_test_basic.xlsx')
+        except FileNotFoundError:
+            print('File not found')
         data=user_data.T
         data.columns=data.iloc[0].values        
         data=data.iloc[1: , :]
