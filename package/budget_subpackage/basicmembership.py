@@ -66,7 +66,5 @@ class BasicMembership:
             reward="25% off of your membership for the next year"
         return reward
         
-basic=BasicMembership()
-basic.user_expenditure_data()
 
             

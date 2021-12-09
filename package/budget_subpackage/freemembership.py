@@ -41,11 +41,9 @@ class FreeMemberShip:
         
 
     def add_amount(self,amount):
-        print('adding amount')
-        self.__balance+=amount
-        print('amount added')
+        self.__balance+=amount        
         self.show_budget_chart()  
-        print('done bitch!')      
+            
         
 
     def withdraw_amount(self,amount):
