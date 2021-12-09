@@ -18,9 +18,10 @@ class PremiumMembership(BasicMembership):
 
     def expenditure_chart(self,monthly_allowance):  
         try:      
-            self.__monthly_allowance=int(monthly_allowance)
+            monthly_allowance=int(monthly_allowance)
             data=self.user_expenditure_data()
             expenditure_allowance_percentage=data.iloc[0].values*100/monthly_allowance
+            print("here")
             ideal_data= pd.DataFrame([PremiumMembership.__ideal_values],columns=PremiumMembership.__ideal_labels)
             labels=data.columns
             new_labels=[x if x in PremiumMembership.__ideal_labels else "Others" for x in labels]
@@ -33,7 +34,7 @@ class PremiumMembership(BasicMembership):
                 go.Bar(name='Ideal', x=whole_labels, y=self.__whole_data.iloc[2].values)
             ])        
             fig.update_layout(barmode='group')
-            fig.show()   
+            #fig.show()   
         except ValueError:
             print("Invalid value")
         
