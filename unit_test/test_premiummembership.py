@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import io
 import sys
-from package.budget_subpackage.premiummembership import PremiumMembership
+from budgetplanner.budget_subpackage.premiummembership import PremiumMembership
 
 class TestPremiumMembersip(unittest.TestCase):
     @classmethod

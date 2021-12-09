@@ -2,7 +2,7 @@ import unittest
 import pandas as pd
 import numpy as np
 from pandas.testing import assert_frame_equal
-from package.budget_subpackage.basicmembership import BasicMembership
+from budgetplanner.budget_subpackage.basicmembership import BasicMembership
 import io
 import sys
 

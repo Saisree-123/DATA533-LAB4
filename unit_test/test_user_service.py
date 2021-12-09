@@ -1,10 +1,10 @@
 import unittest
 from io import StringIO
 from unittest.mock import patch
-import package.user_subpackage as user
-import package.user_subpackage.personal_info as personal_info
-import package.user_subpackage.service as service
-import package.user_subpackage.bank_info as bank_info
+import budgetplanner.user_subpackage as user
+import budgetplanner.user_subpackage.personal_info as personal_info
+import budgetplanner.user_subpackage.service as service
+import budgetplanner.user_subpackage.bank_info as bank_info
 class test_user_service(unittest.TestCase):
     def setUp(self):
         self.service = service.Service()
