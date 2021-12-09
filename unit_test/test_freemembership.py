@@ -47,6 +47,7 @@ class TestFreeMembersip(unittest.TestCase):
         balance=200
         amount=100
         free_mem=FreeMemberShip(budget)
+        print(free_mem.get_user_budget())
         free_mem.add_amount(amount)
         print('test')
         self.assertEqual(free_mem.get_balance(),amount) 
