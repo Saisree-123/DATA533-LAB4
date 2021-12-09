@@ -1,5 +1,5 @@
 # Budget-Planning
-![passing](https://app.travis-ci.com/Saisree-123/DATA533-LAB4.svg?branch=master)
+![passing](https://app.travis-ci.com/Saisree-123/DATA533-LAB4.svg?branch=master) <br>
 PyPI link: https://pypi.org/project/budgetplanner/
 
 # Subpackage1: User #
