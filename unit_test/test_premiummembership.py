@@ -57,7 +57,7 @@ class TestPremiumMembersip(unittest.TestCase):
 
         result1=premium1.analysis_and_suggestion(10000)
         self.assertEqual(result1,2040)        
-
+        print("2")
         input_text = b"2\n"
         test_input.write(input_text)
         test_input.seek(-len(input_text), io.SEEK_CUR)
@@ -65,7 +65,7 @@ class TestPremiumMembersip(unittest.TestCase):
         result1=premium1.analysis_and_suggestion(8000)
         self.assertEqual(result1,4080) 
         self.assertAlmostEqual(result1,4080.001,2)
-
+        print("3")
         input_text = b"3\n"
         test_input.write(input_text)
         test_input.seek(-len(input_text), io.SEEK_CUR)
@@ -73,6 +73,10 @@ class TestPremiumMembersip(unittest.TestCase):
         result1=premium1.analysis_and_suggestion(3000)
         self.assertEqual(result1,5100) 
         self.assertAlmostEqual(result1,5100.001,2)
+
+        test_input.close()
+        sys.stdin = sys.__stdin__
+    
 
 
 
