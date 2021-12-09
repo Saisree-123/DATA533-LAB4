@@ -20,8 +20,7 @@ class PremiumMembership(BasicMembership):
         try:      
             monthly_allowance=int(monthly_allowance)
             data=self.user_expenditure_data()
-            expenditure_allowance_percentage=data.iloc[0].values*100/monthly_allowance
-            print("here")
+            expenditure_allowance_percentage=data.iloc[0].values*100/monthly_allowance            
             ideal_data= pd.DataFrame([PremiumMembership.__ideal_values],columns=PremiumMembership.__ideal_labels)
             labels=data.columns
             new_labels=[x if x in PremiumMembership.__ideal_labels else "Others" for x in labels]
