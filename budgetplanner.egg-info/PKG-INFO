@@ -1,13 +1,10 @@
-Metadata-Version: 2.1
+Metadata-Version: 1.0
 Name: budgetplanner
-Version: 0.1
+Version: 0.2
 Summary: When piggy bank becomes your financial assisstant
 Home-page: https://github.com/Saisree-123/DATA533-LAB4
-Author: Saisree GR
-Author-email: saisree.gr@gmail.com
+Author: Saisree GR, Tingwen Hua
+Author-email: saisree.gr@gmail.com, tingwenhua@gmail.com
 License: MIT
+Description: UNKNOWN
 Platform: UNKNOWN
-License-File: LICENSE.txt
-
-UNKNOWN
-
