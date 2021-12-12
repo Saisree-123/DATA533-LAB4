@@ -23,7 +23,8 @@ class Service:
         class Error(Exception):
             pass
         class NoserviceError(Error):
-            print('Please provide a vaild service number.')
+            pass
+            
         try:
             if service_number == 1:
                  print('This service can store your bank informations, such as account/online banking id and password.')
@@ -33,17 +34,16 @@ class Service:
                  print('This service can help you create a budget planning based on your income and daily usage.')
             elif service_number == 4:
                  print('This service can give you some detailed analysis and suggestions on how to save your money.')
-            else:
-                raise NoserviceError
+     
         except NoserviceError as e:
-                 print(e)  
+            print('Please provide a vaild service number.')   
         
             
     def choice(self,c_num):
         class Error(Exception):
             pass
         class NoserviceError(Error):
-            print('Please provide a vaild service number.')
+            pass
         try:
             if c_num == 1:
                 print('This service is included in free membership.')
@@ -57,10 +57,8 @@ class Service:
             elif c_num == 4:
                 print('This service is included in premium membership. The monthly sibscription fee is $25.')
                 self.__choice=c_num
-            else:
-                raise NoserviceError
         except NoserviceError as e:
-            print(e)
+            print('Please provide a vaild service number.') 
             
 
     def getChoice(self):

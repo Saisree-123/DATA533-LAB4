@@ -1,8 +1,8 @@
-from .freemembership import FreeMemberShip
-from .basicmembership import BasicMembership
-from .premiummembership import PremiumMembership
-from ..user_subpackage.personal_info import personal_info as ps
-from ..user_subpackage.service import Service
+from budget_subpackage.freemembership import FreeMemberShip
+from budget_subpackage.basicmembership import BasicMembership
+from budget_subpackage.premiummembership import PremiumMembership
+from user_subpackage.personal_info import personal_info as ps
+from user_subpackage.service import Service
 
 def testing_budget():    
     print("Hello, we are thrilled to have you with us. We hope to make your life easier by managing your piggy bank for you :) To begin with, we would love to know more about you. Please fill in the following details")
