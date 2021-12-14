@@ -36,7 +36,7 @@ class Service:
                  print('This service can give you some detailed analysis and suggestions on how to save your money.')
      
         except NoserviceError as e:
-            print('Please provide a vaild service number.')   
+            print('The service you chose is not available.Please provide a vaild service number.')   
         
             
     def choice(self,c_num):
@@ -58,7 +58,7 @@ class Service:
                 print('This service is included in premium membership. The monthly sibscription fee is $25.')
                 self.__choice=c_num
         except NoserviceError as e:
-            print('Please provide a vaild service number.') 
+            print('The service you chose is not available.Please provide a vaild service number.') 
             
 
     def getChoice(self):

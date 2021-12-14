@@ -38,7 +38,7 @@ class test_user_service(unittest.TestCase):
         service_list.append("This service can track your monthly expenditures and help you manage your money and making a monthly budget plan.\n")
         service_list.append("This service can help you create a budget planning based on your income and daily usage.\n")
         service_list.append("This service can give you some detailed analysis and suggestions on how to save your money.\n")
-        service_list.append("")
+        service_list.append("The service you chose is not available.Please provide a vaild service number.\n")
         for i in range(5):
             with patch('sys.stdout',new=StringIO()) as fakeoutput:
                 self.service.show(i+1)
